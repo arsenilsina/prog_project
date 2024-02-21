@@ -114,7 +114,7 @@ if st.sidebar.checkbox('Plots'):
         # Barplot of the real GDP per capita growth
         plt.bar(x=real_gdp_growth_sorted.index, height=real_gdp_growth_sorted['Real GDP growth (annual %)'])
         plt.xticks(rotation=90)
-        plt.title('Real GDP growth (annual %)')
+        plt.title('Average Real GDP growth')
         plt.ylabel('Growth Rate (%)')
         plt.xlabel('Country')
         plt.show()
@@ -135,7 +135,7 @@ if st.sidebar.checkbox('Plots'):
             
             # Subplot 1: Line plot
             ax[0].plot(country_df.index.get_level_values('Date'), country_df['Real GDP growth (annual %)'], color='blue', label='Real GDP growth (annual %)', linestyle='-', marker='o')
-            ax[0].set_xlabel('Time (year)')
+            ax[0].set_xlabel('Year')
             ax[0].set_ylabel('Real GDP growth (annual %)')
             ax[0].set_title(f'Line Plot: GDP Growth Trends of {country_select}')
             ax[0].grid(linestyle='--', alpha=0.6)
@@ -159,11 +159,13 @@ if st.sidebar.checkbox('Plots'):
         if country_select == real_gdp_growth_sorted.index[1]:
             country_mask = african_economies_clean_df.index.get_level_values('country') == real_gdp_growth_sorted.index[1]
             country_df = african_economies_clean_df[country_mask]
+            
             # Plot the GDP growth trends for Ethiopia
             fig2, ax = plt.subplots(2, 1, figsize=(12, 10))
+            
             # Subplot 1: Line plot
             ax[0].plot(country_df.index.get_level_values('Date'), country_df['Real GDP growth (annual %)'], color='blue', label='Real GDP growth (annual %)', linestyle='-', marker='o')
-            ax[0].set_xlabel('Time (year)')
+            ax[0].set_xlabel('Year')
             ax[0].set_ylabel('Real GDP growth (annual %)')
             ax[0].set_title(f'Line Plot: GDP Growth Trends of {country_select}')
             ax[0].grid(linestyle='--', alpha=0.6)
@@ -187,11 +189,13 @@ if st.sidebar.checkbox('Plots'):
         if country_select == real_gdp_growth_sorted.index[2]:
             country_mask = african_economies_clean_df.index.get_level_values('country') == real_gdp_growth_sorted.index[2]
             country_df = african_economies_clean_df[country_mask]
-            # Plot the GDP growth trends for Ethiopia
+            
+            # Plot the GDP growth trends for third country
             fig2, ax = plt.subplots(2, 1, figsize=(12, 10))
+            
             # Subplot 1: Line plot
             ax[0].plot(country_df.index.get_level_values('Date'), country_df['Real GDP growth (annual %)'], color='blue', label='Real GDP growth (annual %)', linestyle='-', marker='o')
-            ax[0].set_xlabel('Time (year)')
+            ax[0].set_xlabel('Year')
             ax[0].set_ylabel('Real GDP growth (annual %)')
             ax[0].set_title(f'Line Plot: GDP Growth Trends of {country_select}')
             ax[0].grid(linestyle='--', alpha=0.6)
@@ -215,11 +219,13 @@ if st.sidebar.checkbox('Plots'):
         if country_select == real_gdp_growth_sorted.index[3]:
             country_mask = african_economies_clean_df.index.get_level_values('country') == real_gdp_growth_sorted.index[3]
             country_df = african_economies_clean_df[country_mask]
-            # Plot the GDP growth trends for Ethiopia
+            
+            # Plot the GDP growth trends for fourth country
             fig2, ax = plt.subplots(2, 1, figsize=(12, 10))
+            
             # Subplot 1: Line plot
             ax[0].plot(country_df.index.get_level_values('Date'), country_df['Real GDP growth (annual %)'], color='blue', label='Real GDP growth (annual %)', linestyle='-', marker='o')
-            ax[0].set_xlabel('Time (year)')
+            ax[0].set_xlabel('Year')
             ax[0].set_ylabel('Real GDP growth (annual %)')
             ax[0].set_title(f'Line Plot: GDP Growth Trends of {country_select}')
             ax[0].grid(linestyle='--', alpha=0.6)
@@ -243,11 +249,13 @@ if st.sidebar.checkbox('Plots'):
         if country_select == real_gdp_growth_sorted.index[4]:
             country_mask = african_economies_clean_df.index.get_level_values('country') == real_gdp_growth_sorted.index[4]
             country_df = african_economies_clean_df[country_mask]
-            # Plot the GDP growth trends for Ethiopia
+            
+            # Plot the GDP growth trends for fifth country
             fig2, ax = plt.subplots(2, 1, figsize=(12, 10))
+            
             # Subplot 1: Line plot
             ax[0].plot(country_df.index.get_level_values('Date'), country_df['Real GDP growth (annual %)'], color='blue', label='Real GDP growth (annual %)', linestyle='-', marker='o')
-            ax[0].set_xlabel('Time (year)')
+            ax[0].set_xlabel('Year')
             ax[0].set_ylabel('Real GDP growth (annual %)')
             ax[0].set_title(f'Line Plot: GDP Growth Trends of {country_select}')
             ax[0].grid(linestyle='--', alpha=0.6)
@@ -289,11 +297,13 @@ if st.sidebar.checkbox('Plots'):
         if country_select == real_gdp_per_capita_growth_sorted.index[0]:
             country_mask = african_economies_clean_df.index.get_level_values('country') == real_gdp_per_capita_growth_sorted.index[0]
             country_df = african_economies_clean_df[country_mask]
-            # Plot the GDP growth trends for Ethiopia
+            
+            # Plot the GDP per capita trend for first country
             fig2, ax = plt.subplots(2, 1, figsize=(12, 10))
+            
             # Subplot 1: Line plot
             ax[0].plot(country_df.index.get_level_values('Date'), country_df['Annual growth rate of real GDP per capita (%)'], color='blue', label='Annual growth rate of real GDP per capita (%)', linestyle='-', marker='o')
-            ax[0].set_xlabel('Time (year)')
+            ax[0].set_xlabel('Year')
             ax[0].set_ylabel('Annual growth rate of real GDP per capita (%)')
             ax[0].set_title(f'Line Plot: GDP per Capita Trend of {country_select}')
             ax[0].grid(linestyle='--', alpha=0.6)
@@ -317,11 +327,13 @@ if st.sidebar.checkbox('Plots'):
         if country_select == real_gdp_per_capita_growth_sorted.index[1]:
             country_mask = african_economies_clean_df.index.get_level_values('country') == real_gdp_per_capita_growth_sorted.index[1]
             country_df = african_economies_clean_df[country_mask]
-            # Plot the GDP growth trends for Ethiopia
+            
+            # Plot the GDP per capita trend for second country
             fig2, ax = plt.subplots(2, 1, figsize=(12, 10))
+            
             # Subplot 1: Line plot
             ax[0].plot(country_df.index.get_level_values('Date'), country_df['Annual growth rate of real GDP per capita (%)'], color='blue', label='Annual growth rate of real GDP per capita (%)', linestyle='-', marker='o')
-            ax[0].set_xlabel('Time (year)')
+            ax[0].set_xlabel('Year')
             ax[0].set_ylabel('Annual growth rate of real GDP per capita (%)')
             ax[0].set_title(f'Line Plot: GDP per Capita Trend of {country_select}')
             ax[0].grid(linestyle='--', alpha=0.6)
@@ -345,11 +357,13 @@ if st.sidebar.checkbox('Plots'):
         if country_select == real_gdp_per_capita_growth_sorted.index[2]:
             country_mask = african_economies_clean_df.index.get_level_values('country') == real_gdp_per_capita_growth_sorted.index[2]
             country_df = african_economies_clean_df[country_mask]
-            # Plot the GDP growth trends for Ethiopia
+            
+            # Plot the GDP per capita trend for third country
             fig2, ax = plt.subplots(2, 1, figsize=(12, 10))
+            
             # Subplot 1: Line plot
             ax[0].plot(country_df.index.get_level_values('Date'), country_df['Annual growth rate of real GDP per capita (%)'], color='blue', label='Annual growth rate of real GDP per capita (%)', linestyle='-', marker='o')
-            ax[0].set_xlabel('Time (year)')
+            ax[0].set_xlabel('Year')
             ax[0].set_ylabel('Annual growth rate of real GDP per capita (%)')
             ax[0].set_title(f'Line Plot: GDP per Capita Trend of {country_select}')
             ax[0].grid(linestyle='--', alpha=0.6)
@@ -373,11 +387,13 @@ if st.sidebar.checkbox('Plots'):
         if country_select == real_gdp_per_capita_growth_sorted.index[3]:
             country_mask = african_economies_clean_df.index.get_level_values('country') == real_gdp_per_capita_growth_sorted.index[3]
             country_df = african_economies_clean_df[country_mask]
-            # Plot the GDP growth trends for Ethiopia
+            
+            # Plot the GDP per capita trend for fourth country
             fig2, ax = plt.subplots(2, 1, figsize=(12, 10))
+            
             # Subplot 1: Line plot
             ax[0].plot(country_df.index.get_level_values('Date'), country_df['Annual growth rate of real GDP per capita (%)'], color='blue', label='Real GDP growth (annual %)', linestyle='-', marker='o')
-            ax[0].set_xlabel('Time (year)')
+            ax[0].set_xlabel('Year')
             ax[0].set_ylabel('Annual growth rate of real GDP per capita (%)')
             ax[0].set_title(f'Line Plot: GDP per Capita Trend of {country_select}')
             ax[0].grid(linestyle='--', alpha=0.6)
@@ -401,11 +417,13 @@ if st.sidebar.checkbox('Plots'):
         if country_select == real_gdp_per_capita_growth_sorted.index[4]:
             country_mask = african_economies_clean_df.index.get_level_values('country') == real_gdp_per_capita_growth_sorted.index[4]
             country_df = african_economies_clean_df[country_mask]
-            # Plot the GDP growth trends for Ethiopia
+            
+            # Plot the GDP per capita trend for fifth country
             fig2, ax = plt.subplots(2, 1, figsize=(12, 10))
+            
             # Subplot 1: Line plot
             ax[0].plot(country_df.index.get_level_values('Date'), country_df['Real GDP growth (annual %)'], color='blue', label='Annual growth rate of real GDP per capita (%)', linestyle='-', marker='o')
-            ax[0].set_xlabel('Time (year)')
+            ax[0].set_xlabel('Year')
             ax[0].set_ylabel('Annual growth rate of real GDP per capita (%)')
             ax[0].set_title(f'Line Plot: GDP per Capita Trend of {country_select}')
             ax[0].grid(linestyle='--', alpha=0.6)
@@ -427,7 +445,8 @@ if st.sidebar.checkbox('Plots'):
             st.pyplot(fig2)
 
     if plot_select == 'Population':
-        # Creating two mask to compare how has changed the distribution of Population
+        
+        # Creating two mask to compare how has changed the distribution of Population in 1995 and 2023
         mask_1995 = african_economies_clean_df.index.get_level_values('Date') == 1995
         mask_2023 = african_economies_clean_df.index.get_level_values('Date') == 2023
         african_economies_1995_df = african_economies_clean_df[mask_1995]
@@ -445,7 +464,7 @@ if st.sidebar.checkbox('Plots'):
                     labels=['1995','2023'])
         # Set the title and labels of the plot
         plt.title('Population Distribution in 1995 and 2023')
-        plt.ylabel('Population')
+        plt.ylabel('Population (millions)')
         plt.show()
         st.pyplot(fig1)
 
@@ -454,12 +473,14 @@ if st.sidebar.checkbox('Plots'):
         if country_select == population_sorted.index.get_level_values('country')[0]:
             country_mask = african_economies_clean_df.index.get_level_values('country') == population_sorted.index.get_level_values('country')[0]
             country_df = african_economies_clean_df[country_mask]
-            # Plot the GDP growth trends for Ethiopia
+            
+            # Plot the Population trend for first country
             fig2, ax = plt.subplots(2, 1, figsize=(12, 10))
+            
             # Subplot 1: Line plot
             ax[0].plot(country_df.index.get_level_values('Date'), country_df['Population, total'], color='blue', label='Population, total', linestyle='-', marker='o')
-            ax[0].set_xlabel('Time (year)')
-            ax[0].set_ylabel('Population')
+            ax[0].set_xlabel('Year')
+            ax[0].set_ylabel('Population (millions)')
             ax[0].set_title(f'Line Plot: Population Trend of {country_select}')
             ax[0].grid(linestyle='--', alpha=0.6)
             ax[0].set_xticks(country_df.index.get_level_values('Date'))
@@ -469,7 +490,7 @@ if st.sidebar.checkbox('Plots'):
             # Subplot 2: Bar chart
             ax[1].bar(country_df.index.get_level_values('Date'), country_df['Population, total'], alpha=1, color='red', label='Population, total')
             ax[1].set_xlabel('Year')
-            ax[1].set_ylabel('Population')
+            ax[1].set_ylabel('Population (millions)')
             ax[1].set_title(f'Bar Plot: Population Trend of {country_select}')
             ax[1].grid(linestyle='--', alpha=0.6)
             ax[1].set_xticks(country_df.index.get_level_values('Date'))
@@ -482,12 +503,14 @@ if st.sidebar.checkbox('Plots'):
         if country_select == population_sorted.index.get_level_values('country')[1]:
             country_mask = african_economies_clean_df.index.get_level_values('country') == population_sorted.index.get_level_values('country')[1]
             country_df = african_economies_clean_df[country_mask]
-            # Plot the GDP growth trends for Ethiopia
+            
+            # Plot the Population trend for second country
             fig2, ax = plt.subplots(2, 1, figsize=(12, 10))
+            
             # Subplot 1: Line plot
             ax[0].plot(country_df.index.get_level_values('Date'), country_df['Population, total'], color='blue', label='Population, total', linestyle='-', marker='o')
-            ax[0].set_xlabel('Time (year)')
-            ax[0].set_ylabel('Population')
+            ax[0].set_xlabel('Year')
+            ax[0].set_ylabel('Population (millions)')
             ax[0].set_title(f'Line Plot: Population Trend of {country_select}')
             ax[0].grid(linestyle='--', alpha=0.6)
             ax[0].set_xticks(country_df.index.get_level_values('Date'))
@@ -497,7 +520,7 @@ if st.sidebar.checkbox('Plots'):
             # Subplot 2: Bar chart
             ax[1].bar(country_df.index.get_level_values('Date'), country_df['Population, total'], alpha=1, color='red', label='Population, total')
             ax[1].set_xlabel('Year')
-            ax[1].set_ylabel('Population')
+            ax[1].set_ylabel('Population (millions)')
             ax[1].set_title(f'Bar Plot: Population Trend of {country_select}')
             ax[1].grid(linestyle='--', alpha=0.6)
             ax[1].set_xticks(country_df.index.get_level_values('Date'))
@@ -510,12 +533,14 @@ if st.sidebar.checkbox('Plots'):
         if country_select == population_sorted.index.get_level_values('country')[2]:
             country_mask = african_economies_clean_df.index.get_level_values('country') == population_sorted.index.get_level_values('country')[2]
             country_df = african_economies_clean_df[country_mask]
-            # Plot the GDP growth trends for Ethiopia
+            
+            # Plot the Population trend for third country
             fig2, ax = plt.subplots(2, 1, figsize=(12, 10))
+            
             # Subplot 1: Line plot
             ax[0].plot(country_df.index.get_level_values('Date'), country_df['Population, total'], color='blue', label='Population, total', linestyle='-', marker='o')
-            ax[0].set_xlabel('Time (year)')
-            ax[0].set_ylabel('Population')
+            ax[0].set_xlabel('Year')
+            ax[0].set_ylabel('Population (millions)')
             ax[0].set_title(f'Line Plot: Population Trend of {country_select}')
             ax[0].grid(linestyle='--', alpha=0.6)
             ax[0].set_xticks(country_df.index.get_level_values('Date'))
@@ -525,7 +550,7 @@ if st.sidebar.checkbox('Plots'):
             # Subplot 2: Bar chart
             ax[1].bar(country_df.index.get_level_values('Date'), country_df['Population, total'], alpha=1, color='red', label='Population, total')
             ax[1].set_xlabel('Year')
-            ax[1].set_ylabel('Population')
+            ax[1].set_ylabel('Population (millions)')
             ax[1].set_title(f'Bar Plot: Population Trend of {country_select}')
             ax[1].grid(linestyle='--', alpha=0.6)
             ax[1].set_xticks(country_df.index.get_level_values('Date'))
@@ -538,12 +563,14 @@ if st.sidebar.checkbox('Plots'):
         if country_select == population_sorted.index.get_level_values('country')[3]:
             country_mask = african_economies_clean_df.index.get_level_values('country') == population_sorted.index.get_level_values('country')[3]
             country_df = african_economies_clean_df[country_mask]
-            # Plot the GDP growth trends for Ethiopia
+            
+            # Plot the Population trend for fourth country
             fig2, ax = plt.subplots(2, 1, figsize=(12, 10))
+            
             # Subplot 1: Line plot
             ax[0].plot(country_df.index.get_level_values('Date'), country_df['Population, total'], color='blue', label='Population, total', linestyle='-', marker='o')
-            ax[0].set_xlabel('Time (year)')
-            ax[0].set_ylabel('Population')
+            ax[0].set_xlabel('Year')
+            ax[0].set_ylabel('Population (millions)')
             ax[0].set_title(f'Line Plot: Population Trend of {country_select}')
             ax[0].grid(linestyle='--', alpha=0.6)
             ax[0].set_xticks(country_df.index.get_level_values('Date'))
@@ -553,7 +580,7 @@ if st.sidebar.checkbox('Plots'):
             # Subplot 2: Bar chart
             ax[1].bar(country_df.index.get_level_values('Date'), country_df['Population, total'], alpha=1, color='red', label='Population, total')
             ax[1].set_xlabel('Year')
-            ax[1].set_ylabel('Population')
+            ax[1].set_ylabel('Population (millions)')
             ax[1].set_title(f'Bar Plot: Population Trend of {country_select}')
             ax[1].grid(linestyle='--', alpha=0.6)
             ax[1].set_xticks(country_df.index.get_level_values('Date'))
@@ -566,12 +593,14 @@ if st.sidebar.checkbox('Plots'):
         if country_select == population_sorted.index.get_level_values('country')[4]:
             country_mask = african_economies_clean_df.index.get_level_values('country') == population_sorted.index.get_level_values('country')[4]
             country_df = african_economies_clean_df[country_mask]
-            # Plot the GDP growth trends for Ethiopia
+            
+            # Plot the Population trend for fifth country
             fig2, ax = plt.subplots(2, 1, figsize=(12, 10))
+            
             # Subplot 1: Line plot
             ax[0].plot(country_df.index.get_level_values('Date'), country_df['Population, total'], color='blue', label='Population, total', linestyle='-', marker='o')
-            ax[0].set_xlabel('Time (year)')
-            ax[0].set_ylabel('Population')
+            ax[0].set_xlabel('Year')
+            ax[0].set_ylabel('Population (millions)')
             ax[0].set_title(f'Line Plot: Population Trend of {country_select}')
             ax[0].grid(linestyle='--', alpha=0.6)
             ax[0].set_xticks(country_df.index.get_level_values('Date'))
@@ -581,7 +610,7 @@ if st.sidebar.checkbox('Plots'):
             # Subplot 2: Bar chart
             ax[1].bar(country_df.index.get_level_values('Date'), country_df['Population, total'], alpha=1, color='red', label='Population, total')
             ax[1].set_xlabel('Year')
-            ax[1].set_ylabel('Population')
+            ax[1].set_ylabel('Population (millions)')
             ax[1].set_title(f'Bar Plot: Population Trend of {country_select}')
             ax[1].grid(linestyle='--', alpha=0.6)
             ax[1].set_xticks(country_df.index.get_level_values('Date'))
@@ -594,11 +623,11 @@ if st.sidebar.checkbox('Plots'):
     if plot_select == 'Inflation Trend':
 
         inflation_sorted = african_groupby_mean_df.sort_values(by='Inflation, consumer prices (annual %)',ascending=False)
-        # Set the size of the figure
         
+        # Set the size of the figure
         fig1 = plt.figure(figsize=(15,10))
 
-        # Barplot of the real GDP per capita growth
+        # Barplot of the average inflation
         plt.bar(x=inflation_sorted.index, height=inflation_sorted['Inflation, consumer prices (annual %)'])
         plt.xticks(rotation=90)
         plt.title('Inflation, consumer prices (annual %)')
@@ -612,11 +641,13 @@ if st.sidebar.checkbox('Plots'):
         if country_select == inflation_sorted.index[0]:
             country_mask = african_economies_clean_df.index.get_level_values('country') == inflation_sorted.index[0]
             country_df = african_economies_clean_df[country_mask]
-            # Plot the GDP growth trends for Ethiopia
+            
+            # Plot the Inflation trend for first country
             fig2, ax = plt.subplots(2, 1, figsize=(12, 10))
+            
             # Subplot 1: Line plot
             ax[0].plot(country_df.index.get_level_values('Date'), country_df['Inflation, consumer prices (annual %)'], color='blue', label='Inflation, consumer prices (annual %)', linestyle='-', marker='o')
-            ax[0].set_xlabel('Time (year)')
+            ax[0].set_xlabel('Year')
             ax[0].set_ylabel('Inflation, consumer prices (annual %)')
             ax[0].set_title(f'Line Plot: Inflation Trend of {country_select}')
             ax[0].grid(linestyle='--', alpha=0.6)
@@ -640,11 +671,13 @@ if st.sidebar.checkbox('Plots'):
         if country_select == inflation_sorted.index[1]:
             country_mask = african_economies_clean_df.index.get_level_values('country') == inflation_sorted.index[1]
             country_df = african_economies_clean_df[country_mask]
-            # Plot the GDP growth trends for Ethiopia
+            
+            # Plot the Inflation trend for second country
             fig2, ax = plt.subplots(2, 1, figsize=(12, 10))
+            
             # Subplot 1: Line plot
             ax[0].plot(country_df.index.get_level_values('Date'), country_df['Inflation, consumer prices (annual %)'], color='blue', label='Inflation, consumer prices (annual %)', linestyle='-', marker='o')
-            ax[0].set_xlabel('Time (year)')
+            ax[0].set_xlabel('Year')
             ax[0].set_ylabel('Inflation, consumer prices (annual %)')
             ax[0].set_title(f'Line Plot: Inflation Trend of {country_select}')
             ax[0].grid(linestyle='--', alpha=0.6)
@@ -668,11 +701,13 @@ if st.sidebar.checkbox('Plots'):
         if country_select == inflation_sorted.index[2]:
             country_mask = african_economies_clean_df.index.get_level_values('country') == inflation_sorted.index[2]
             country_df = african_economies_clean_df[country_mask]
-            # Plot the GDP growth trends for Ethiopia
+            
+            # Plot the Inflation trend for third country
             fig2, ax = plt.subplots(2, 1, figsize=(12, 10))
+            
             # Subplot 1: Line plot
             ax[0].plot(country_df.index.get_level_values('Date'), country_df['Inflation, consumer prices (annual %)'], color='blue', label='Inflation, consumer prices (annual %)', linestyle='-', marker='o')
-            ax[0].set_xlabel('Time (year)')
+            ax[0].set_xlabel('Year')
             ax[0].set_ylabel('Inflation, consumer prices (annual %)')
             ax[0].set_title(f'Line Plot: Inflation Trend of {country_select}')
             ax[0].grid(linestyle='--', alpha=0.6)
@@ -696,11 +731,13 @@ if st.sidebar.checkbox('Plots'):
         if country_select == inflation_sorted.index[3]:
             country_mask = african_economies_clean_df.index.get_level_values('country') == inflation_sorted.index[3]
             country_df = african_economies_clean_df[country_mask]
-            # Plot the GDP growth trends for Ethiopia
+            
+            # Plot the Inflation trend for fourth country
             fig2, ax = plt.subplots(2, 1, figsize=(12, 10))
+            
             # Subplot 1: Line plot
             ax[0].plot(country_df.index.get_level_values('Date'), country_df['Inflation, consumer prices (annual %)'], color='blue', label='Inflation, consumer prices (annual %)', linestyle='-', marker='o')
-            ax[0].set_xlabel('Time (year)')
+            ax[0].set_xlabel('Year')
             ax[0].set_ylabel('Inflation, consumer prices (annual %)')
             ax[0].set_title(f'Line Plot: Inflation Trend of {country_select}')
             ax[0].grid(linestyle='--', alpha=0.6)
@@ -725,11 +762,13 @@ if st.sidebar.checkbox('Plots'):
         if country_select == inflation_sorted.index[4]:
             country_mask = african_economies_clean_df.index.get_level_values('country') == inflation_sorted.index[4]
             country_df = african_economies_clean_df[country_mask]
-            # Plot the GDP growth trends for Ethiopia
+            
+            # Plot the Inflation trend for fifth country
             fig2, ax = plt.subplots(2, 1, figsize=(12, 10))
+            
             # Subplot 1: Line plot
             ax[0].plot(country_df.index.get_level_values('Date'), country_df['Inflation, consumer prices (annual %)'], color='blue', label='Inflation, consumer prices (annual %)', linestyle='-', marker='o')
-            ax[0].set_xlabel('Time (year)')
+            ax[0].set_xlabel('Year')
             ax[0].set_ylabel('Inflation, consumer prices (annual %)')
             ax[0].set_title(f'Line Plot: Inflation Trend of {country_select}')
             ax[0].grid(linestyle='--', alpha=0.6)
@@ -753,15 +792,15 @@ if st.sidebar.checkbox('Plots'):
     if plot_select == 'CO2 Emissions per Capita':
 
         co2_sorted = african_groupby_mean_df.sort_values(by='CO2 emissions (metric tons per capita)',ascending=False)
-        # Set the size of the figure
         
+        # Set the size of the figure
         fig1 = plt.figure(figsize=(15,10))
 
-        # Barplot of the real GDP per capita growth
+        # Barplot of the average CO2 Emissions per Capita
         plt.bar(x=co2_sorted.index, height=co2_sorted['CO2 emissions (metric tons per capita)'])
         plt.xticks(rotation=90)
-        plt.title('CO2 emissions (metric tons per capita)')
-        plt.ylabel('Growth Rate (%)')
+        plt.title('Average CO2 emissions per Capita')
+        plt.ylabel('CO2 emissions (metric tons per capita)')
         plt.xlabel('Country')
         plt.show()
         st.pyplot(fig1)
@@ -771,11 +810,13 @@ if st.sidebar.checkbox('Plots'):
         if country_select == co2_sorted.index[0]:
             country_mask = african_economies_clean_df.index.get_level_values('country') == co2_sorted.index[0]
             country_df = african_economies_clean_df[country_mask]
-            # Plot the GDP growth trends for Ethiopia
+            
+            # Plot the CO2 Emissions per Capita trend for first country
             fig2, ax = plt.subplots(2, 1, figsize=(12, 10))
+            
             # Subplot 1: Line plot
             ax[0].plot(country_df.index.get_level_values('Date'), country_df['CO2 emissions (metric tons per capita)'], color='blue', label='CO2 emissions (metric tons per capita)', linestyle='-', marker='o')
-            ax[0].set_xlabel('Time (year)')
+            ax[0].set_xlabel('Year')
             ax[0].set_ylabel('CO2 emissions (metric tons per capita)')
             ax[0].set_title(f'Line Plot: CO2 emissions per Capita Trend of {country_select}')
             ax[0].grid(linestyle='--', alpha=0.6)
@@ -799,11 +840,13 @@ if st.sidebar.checkbox('Plots'):
         if country_select == co2_sorted.index[1]:
             country_mask = african_economies_clean_df.index.get_level_values('country') == co2_sorted.index[1]
             country_df = african_economies_clean_df[country_mask]
-            # Plot the GDP growth trends for Ethiopia
+            
+            # Plot the CO2 Emissions per Capita trend for second country
             fig2, ax = plt.subplots(2, 1, figsize=(12, 10))
+            
             # Subplot 1: Line plot
             ax[0].plot(country_df.index.get_level_values('Date'), country_df['CO2 emissions (metric tons per capita)'], color='blue', label='CO2 emissions (metric tons per capita)', linestyle='-', marker='o')
-            ax[0].set_xlabel('Time (year)')
+            ax[0].set_xlabel('Year')
             ax[0].set_ylabel('CO2 emissions (metric tons per capita)')
             ax[0].set_title(f'Line Plot: CO2 emissions per Capita Trend of {country_select}')
             ax[0].grid(linestyle='--', alpha=0.6)
@@ -828,11 +871,12 @@ if st.sidebar.checkbox('Plots'):
             country_mask = african_economies_clean_df.index.get_level_values('country') == co2_sorted.index[2]
             country_df = african_economies_clean_df[country_mask]
 
-            # Plot the GDP growth trends for Ethiopia
+            # Plot the CO2 Emissions per Capita trend for third country
             fig2, ax = plt.subplots(2, 1, figsize=(12, 10))
+            
             # Subplot 1: Line plot
             ax[0].plot(country_df.index.get_level_values('Date'), country_df['CO2 emissions (metric tons per capita)'], color='blue', label='CO2 emissions (metric tons per capita)', linestyle='-', marker='o')
-            ax[0].set_xlabel('Time (year)')
+            ax[0].set_xlabel('Year')
             ax[0].set_ylabel('CO2 emissions (metric tons per capita)')
             ax[0].set_title(f'Line Plot: CO2 emissions per Capita Trend of {country_select}')
             ax[0].grid(linestyle='--', alpha=0.6)
@@ -857,11 +901,12 @@ if st.sidebar.checkbox('Plots'):
             country_mask = african_economies_clean_df.index.get_level_values('country') == co2_sorted.index[3]
             country_df = african_economies_clean_df[country_mask]
             
-            # Plot the GDP growth trends for fourth country
+            # Plot the CO2 Emissions per Capita trend for fourth country
             fig2, ax = plt.subplots(2, 1, figsize=(12, 10))
+            
             # Subplot 1: Line plot
             ax[0].plot(country_df.index.get_level_values('Date'), country_df['CO2 emissions (metric tons per capita)'], color='blue', label='CO2 emissions (metric tons per capita)', linestyle='-', marker='o')
-            ax[0].set_xlabel('Time (year)')
+            ax[0].set_xlabel('Year')
             ax[0].set_ylabel('CO2 emissions (metric tons per capita)')
             ax[0].set_title(f'Line Plot: CO2 emissions per Capita Trend of {country_select}')
             ax[0].grid(linestyle='--', alpha=0.6)
@@ -886,11 +931,12 @@ if st.sidebar.checkbox('Plots'):
             country_mask = african_economies_clean_df.index.get_level_values('country') == co2_sorted.index[4]
             country_df = african_economies_clean_df[country_mask]
             
-            # Plot the GDP growth trends for fifth country
+            # Plot the CO2 Emissions per Capita trend for fifth country
             fig2, ax = plt.subplots(2, 1, figsize=(12, 10))
+            
             # Subplot 1: Line plot
             ax[0].plot(country_df.index.get_level_values('Date'), country_df['CO2 emissions (metric tons per capita)'], color='blue', label='CO2 emissions (metric tons per capita)', linestyle='-', marker='o')
-            ax[0].set_xlabel('Time (year)')
+            ax[0].set_xlabel('Year')
             ax[0].set_ylabel('CO2 emissions (metric tons per capita)')
             ax[0].set_title(f'Line Plot: CO2 emissions per Capita Trend of {country_select}')
             ax[0].grid(linestyle='--', alpha=0.6)
@@ -940,6 +986,7 @@ if st.sidebar.checkbox('Plots'):
             # Selection for the features to be show in specific
             feature_corr = st.multiselect('Select **two** features', corr_country_df.columns, max_selections=2, key='my_key')
 
+            # Check for the lenght of features selected, if they are 2 it plots
             if len(feature_corr) == 2:
                 with st.spinner('Plotting...'):
                     
@@ -970,7 +1017,7 @@ ethiopia_df = african_economies_clean_df[ethiopia_mask]
 
 # The checkbox shows the section of the model when clicked
 if st.sidebar.checkbox('Model'):
-    st.header('A model to predict the GDP')
+    st.header('A model to predict the GDP: Ethiopia')
     ethiopia_model_df = ethiopia_df.reset_index().drop(['country'],axis=1).set_index('Date')
     
     # The container is used to include all the following
